@@ -1,0 +1,10 @@
+{
+    "parser": "babel-eslint",
+    // "extends": ["airbnb"],
+    "rules": {
+        // "no-unused-vars": 0,
+        // "linebreak-style": 0,
+        // "no-trailing-spaces": [2, { "skipBlankLines": true }],
+        // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      }
+  }
