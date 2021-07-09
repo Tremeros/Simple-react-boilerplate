@@ -1,4 +1,7 @@
 import React from 'react';
+import Amount from "./Amount.js";
+import {Euro} from "./Euro.js";
+import {Pound} from "./Pound.js";
 
 import MyImage from './assets/images/isis.jpg';
 import './styles/style.css';
@@ -8,22 +11,23 @@ import FacebookIcon from './Icons/facebook.svg';
 import GithubIcon from './Icons/github.svg';
  
 const App = ({ title }) =>
-<div>
-  <h1>{title}</h1>;
-  <img src={MyImage} alt="torchlight in the sky" />
-  <ul>
-      <li>
-        <TwitterIcon width="40px" height="40px" />
-        <a href="https://twitter.com/rwieruch">Twitter</a>
-      </li>
-      <li>
-        <FacebookIcon width="40px" height="40px" />
-        <a href="https://www.facebook.com/rwieruch/">Facebook</a>
-      </li>
-      <li>
-        <GithubIcon width="40px" height="40px" />
-        <a href="https://github.com/rwieruch">Github</a>
-      </li>
-    </ul>
-</div>
+   <div>
+     <h1>Currency Converter</h1>
+     <Amount
+    renderAmountOne={amount => (
+      <div>
+        <h2>My one Amount</h2>
+        <Pound amount={amount} />
+        <Euro amount={amount} />
+      </div>
+    )}
+    renderAmountTwo={amount => (
+      <div>
+        <h2>My other Amount</h2>
+        <Pound amount={amount} />
+        <Euro amount={amount} />
+      </div>
+    )}
+  />
+   </div>
 export default App;
